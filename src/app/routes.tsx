@@ -34,6 +34,7 @@ import { PersonalInfo } from './pages/PersonalInfo';
 import { GoalsPreferences } from './pages/GoalsPreferences';
 import { NotificationsSettings } from './pages/NotificationsSettings';
 import { Subscription } from './pages/Subscription';
+import { DesignSystem } from './pages/DesignSystem';
 
 export const router = createBrowserRouter([
   {
@@ -167,5 +168,9 @@ export const router = createBrowserRouter([
   {
     path: '/profile/subscription',
     Component: Profile,
+  },
+  {
+    path: '/design-system',
+    Component: DesignSystem,
   },
 ]);

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router';
 import { useApp } from '../contexts/AppContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { TopNav } from '../components/TopNav';
-import { User, Target, Bell, CreditCard, ChevronRight, Edit, Globe } from 'lucide-react';
+import { User, Target, Bell, CreditCard, ChevronRight, Edit, Globe, Palette } from 'lucide-react';
 
 export function Settings() {
   const navigate = useNavigate();
@@ -88,6 +88,21 @@ export function Settings() {
             );
           })}
         </div>
+
+        {/* Design System shortcut */}
+        <button
+          onClick={() => navigate('/design-system')}
+          className="w-full bg-card border border-border rounded-3xl px-6 py-5 flex items-center gap-4 hover:border-primary/40 transition-colors group shadow-sm"
+        >
+          <div className="w-11 h-11 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
+            <Palette className="w-5 h-5 text-primary" />
+          </div>
+          <div className="flex-1 text-left">
+            <div className="font-semibold text-[15px] tracking-tight">Design System</div>
+            <div className="text-xs text-muted-foreground mt-0.5">Colors, typography &amp; components</div>
+          </div>
+          <ChevronRight className="w-5 h-5 text-muted-foreground shrink-0" />
+        </button>
 
         {/* App Info */}
         <div className="bg-card border border-border rounded-3xl p-6 shadow-sm">
